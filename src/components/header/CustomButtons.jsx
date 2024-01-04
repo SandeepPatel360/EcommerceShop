@@ -1,20 +1,25 @@
 import React, { useState, useContext } from 'react';
 
-import { Box, Typography, Badge, Button, styled } from '@mui/material';
+import { Box, Typography, Button, styled } from '@mui/material';
 import { ShoppingCart } from '@mui/icons-material';
+import LoginDialog from '../login/LoginDialog'
+import { DataContext } from '../../context/DataProvider';
 
 
 
 
 const Wrapper = styled(Box)`
-  display: flex;
-  margin: 0 3% 0 auto;
-  & > button, & > p, & > div {
+    display: flex;
+    margin: 0 3% 0 auto;
+    & > button, & > p, & > div {
     margin-right : 40px;
     font-size: 14px;
     align-items : center;
-  }
+    };
 `
+ 
+
+
 const Container = styled(Box)`
     display: flex;
 `
@@ -32,11 +37,22 @@ const LoginButton = styled(Button)`
 
 const CustomButtons = () => {
     
-  
+  const [open, setOpen] = useState(false);
+  const {account} = useContext(DataContext);
+
+  const openDialog = () =>{
+    setOpen(true);
+  }
+
 
     return (
         <Wrapper>
-           <LoginButton variant = 'contained'>Login</LoginButton>
+            {
+                account ? <Typography>{account}</Typography>:
+                <LoginButton variant = 'contained' onClick = {() => openDialog()}>Login</LoginButton>
+            }
+            
+           
             <Typography style={{ marginTop: 3, width: 135 }}>Become a Seller</Typography>
             <Typography style={{ marginTop: 3 }}>More</Typography>
             
@@ -45,6 +61,7 @@ const CustomButtons = () => {
               
                 <Typography style={{ marginLeft: 10 }}>Cart</Typography>
             </Container>
+            <LoginDialog open = {open} setOpen= {setOpen}/>
             
         </Wrapper>
     )
