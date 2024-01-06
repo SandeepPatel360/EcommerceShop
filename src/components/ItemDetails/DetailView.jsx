@@ -8,6 +8,7 @@ import { getProductById } from '../../service/api';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getProductDetails } from '../../redux/actions/productAction';
+import ProductDetail from './ProductDetail';
 
 const Component = styled(Box)`
     margin-top: 55px;
@@ -62,6 +63,7 @@ const DetailView = () => {
                             <span style={{ color: '#878787' }}><strike>₹{product.price.mrp}</strike></span>&nbsp;&nbsp;&nbsp;
                             <span style={{ color: '#388E3C' }}>{product.price.discount} off</span>
                         </Typography>
+                        <ProductDetail product={product} />
                     </RightContainer>
                 </Container>
             }   
