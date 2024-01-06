@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavBar from './NavBar'
 import Banner from './Banner'
 import {Box, styled} from '@mui/material';
+
+
+import {getProducts} from '../../redux/actions/productAction'
+import { useDispatch, useSelector } from 'react-redux';
+
+
+
 
 const Component = styled(Box)`
     padding: 10px;
@@ -9,6 +16,14 @@ const Component = styled(Box)`
 `
 
 const Home = () => {
+
+  const {products } = useSelector(state => state.getProducts);
+  const dispatch = useDispatch();
+  useEffect(() =>{
+      dispatch(getProducts());
+  },[dispatch]);
+
+
   return (
     <div>
       <NavBar/>
