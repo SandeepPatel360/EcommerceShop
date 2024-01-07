@@ -13,9 +13,9 @@
   To get a local copy up and running, follow these simple steps:
 
 
-Clone the repo
-#git clone [](https://github.com/SandeepPatel360/flipCartClone.git)
-#git clone [](https://github.com/SandeepPatel360/MernBackend.git)
+###Clone the repo
+git clone https://github.com/SandeepPatel360/flipCartClone.git
+git clone https://github.com/SandeepPatel360/MernBackend.git
 Install NPM packages
 #npm install
 Start the local server (runs on port 3000)
