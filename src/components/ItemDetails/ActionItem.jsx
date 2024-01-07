@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Button, styled } from '@mui/material';
+import { ShoppingCart as Card, FlashOn as Flash} from '@mui/icons-material';
 import { addToCart } from '../../redux/actions/cartActions';
 import { useDispatch } from 'react-redux';
 import Cart from '../cart/Cart';
@@ -42,8 +43,8 @@ const ActionItem = ({ product }) => {
     return (
         <LeftContainer>
             <Image src={product.detailUrl} /><br />
-            <StyledButton onClick={() => addItemToCart()} style={{marginRight: 10, background: '#ff9f00'}} variant="contained"><Cart />Add to Cart</StyledButton>
-            <StyledButton  variant="contained"> Buy Now</StyledButton>
+            <StyledButton onClick={() => addItemToCart()} style={{marginRight: 10, background: '#ff9f00'}} variant="contained"><Card/>Add to Cart</StyledButton>
+            <StyledButton  variant="contained" styled={{background: '#ff9f00'}}><Flash/> Buy Now</StyledButton>
         </LeftContainer>
     )
 }
