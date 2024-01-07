@@ -65,7 +65,7 @@ Additional Middleware: Implements CORS, body-parser, and dotenv for environment 
 Deployment
 
 
-Front-end: Deployed on Netlify. Accessible at https://ecommerceshopclone.netlify.app/.
+Front-end: Deployed on Netlify. Accessible at https://ecommerceshopcloned.netlify.app/.
 
 
 Back-end: Hosted on Render, with continuous integration and delivery setup
