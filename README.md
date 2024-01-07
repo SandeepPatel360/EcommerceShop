@@ -1,6 +1,7 @@
 
 ### Project Title: React E-commerce App (Flipkart Clone)
   ##Introduction
+  
   This project is a React-based e-commerce application, similar to a Flipkart clone. It's designed to provide a comprehensive demonstration of modern web development techniques, including front-end and back-end development, database integration, state management, and deployment.
   
   ##Features
@@ -13,7 +14,8 @@
 
 
 Clone the repo
-#git clone https://github.com/your_username_/Project-Name.git
+#git clone [](https://github.com/SandeepPatel360/flipCartClone.git)
+#git clone [](https://github.com/SandeepPatel360/MernBackend.git)
 Install NPM packages
 #npm install
 Start the local server (runs on port 3000)
